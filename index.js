@@ -1,38 +1,9 @@
-class snakePart{
-    constructor(x, y){
-        this.x = x;
-        this.y = y;
-    }
-}
+
 const snakeParts = [];
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
-const restartBtn = document.getElementById("restart");
-const highscoreView = document.getElementById("highscore")
-const leaderboardContent = document.getElementById("leaderboardContent");
-const leaderboard = document.getElementById("leaderboard");
 
-let speed = 9;
-let tileCount = 20;
-let tileSize = canvas.width / tileCount - 2;
-let headX = 10;
-let headY = 10;
-let xVelocity = 0;
-let yVelocity = 0;
-let appleX = 5;
-let appleY = 5;
-let tailLength = 2;
-let score = 0;
-let colorInput = document.getElementById("colorInput");
-let defaultColor = "green"
-let bgColor = "black"
-let apColor = "red"
-let bgInput = document.getElementById("bgInput");
-let appleInput = document.getElementById("appleInput");
-let nameInput = document.getElementById("nameInput");
-let name = "Player"
-const gulpSound = new Audio("gulp.mp3");
-const overSound = new Audio("game-over.mp3");
+
 let counter = 0;
 highscoreView.innerHTML = "Highscore: " + localStorage.getItem("highscore")
 
@@ -248,9 +219,6 @@ function drawSnake() {
 }
 
 
-
-
-
 function setColor(){
     defaultColor = colorInput.value;
     colorModal.style.display = "none";
@@ -260,6 +228,9 @@ function setColor(){
 
 function changeSnakePosition() {
     headX = headX + xVelocity;
+
+
+
     headY = headY + yVelocity;
 }
 
@@ -300,15 +271,15 @@ function highScore() {
 }
 
 
-
-
 document.body.addEventListener("keydown", keyDown);
+/*
 
-/*if (nameModal.display.style === "block") {
+if (nameModal.display.style === "block") {
 
 
-}*/
+}
 
+*/
 
 function keyDown(event) {
     // up arrow
@@ -341,7 +312,7 @@ function keyDown(event) {
         xVelocity = 1;
     }
     /// w key
-    if(event.keyCode === 87) {
+    if(event.keyCode === 87 || event.keyCode === 38) {
         if (yVelocity === 1)
             return;
         yVelocity = -1;

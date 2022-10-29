@@ -43,6 +43,7 @@ soundBtn.onclick = function() {
 
 
 
+
 bgButton.onclick = function() {
     bgModal.style.display = "block";
 }
@@ -69,8 +70,8 @@ span.onclick = function() {
     colorModal.style.display = "none";
 }
 
-span.onclick = function() {
-    nameModal.style.display = "none";
+function spanClose() {
+    modal.style.display = "none";
 }
 
 span.onclick = function() {
@@ -84,6 +85,13 @@ span.onclick = function() {
 devWarning.onclick = function() {
     devWarning.style.display = "none";
 }
+function spanClose() {
+modal.style.display = "none";
+}
+
+
+
+
 
 
 

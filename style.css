@@ -49,6 +49,7 @@ button {
     border-radius: 10px;
     margin: 10px;
     cursor: pointer;
+    border-radius: 50px;
 }
 
 .leaderboard {
@@ -205,10 +206,6 @@ input {
     animation-duration: 0.4s
 }
 
-.colorInput {
-    cursor: pointer;
-}
-
 .bgModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -293,7 +290,7 @@ input {
 
 
 .bgInput {
-    cursor: pointer;
+    cursor: default;
 }
 
 .appleBtn {
@@ -302,10 +299,6 @@ input {
 
 .nameButton {
     display: none;
-}
-
-.appleInput {
-    cursor: pointer;
 }
 
 
